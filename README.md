@@ -1,3 +1,5 @@
+> ### This package will no longer be maintained. It is very simple and does what it was created for, so I have no plans on supporting it in the future.
+
 # Laravel Languages
 
 Very basic package that takes care of handling routing for multilanguage sites. Only basic features with minimum of configuration.
@@ -6,7 +8,7 @@ Very basic package that takes care of handling routing for multilanguage sites. 
 
 ### Prerequisites
 
-This package was developed using Laravel 5.6. As of now older versions are not tested/supported.
+This package was developed using Laravel 5.6.
 
 ### Installing
 
@@ -48,7 +50,7 @@ Now you can proceed with configuring this package for your needs.
 
 ### Configuration
 
-Open ```config/stats.php```. All available configurations are well documented there.
+Open ```config/languages.php```. All available configurations are well documented there.
 
 ## Usage
 
@@ -56,6 +58,8 @@ Specify callable for properly setting locale in your routes file, for example:
 
 ```php
 Languages::setLocaleCallable(function ($locale) {
+    // Example of initializing various packages with locale:
+    Carbon::setLocale($locale);
     LaravelGettext::setLocale($locale);
     App::setLocale(LaravelGettext::getLocaleLanguage());
 });
