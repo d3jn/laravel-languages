@@ -179,7 +179,7 @@ class Languages
             return $this->cachedLanguage;
         }
 
-        $language = request()->segment(1);
+        $language = request()->force_lang ?: request()->segment(1);
 
         if ($this->isAvailable($language)) {
             $this->setCurrent($language);
