@@ -86,7 +86,7 @@ Route::group(
 
 ## Authors
 
-* **Serhii Yaniuk** - [d3jn](https://twitter.com/d3jn_)
+* **Serhii Yaniuk** - [d3jn](https://twitter.com/iamdejn)
 
 ## License
 
